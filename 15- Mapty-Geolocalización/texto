@@ -1,0 +1,33 @@
+
+// User Stories -> es básicamente es una descripción de la funcionalidad de la aplicación desde la perspectiva del usuario. Todas las user stories juntas, describirán claramente la funcionalidad de toda la aplicación. Son Básicamente una descripción general de alto nivel de toda la aplicación, lo que nos permitirá a los desarrolladores determinar las características (features) exactas que debemos implementar para que las user stories funcionen como se espera.
+//Luego para visualizar las difeentes acciones que puede realizar un usuario, y como reacciona el programa a estas acciones, generalmente ponemos todas estas características en un buen diagrama de flujo (flowchart). Esto nos lleva a la arquitectura del proyecto (architecture) que significa como organizaremos nuestro código y qué características de JS usaremos. Entonces es la arquitectura del proycto lo que escensialmente mantiene todo el código unido.
+//Nos da una estructura en la que luego podemos desarrollar la funcionalidad de la aplicación. Una vez que terminamos de pensar la arquitectura del proyecto, terminamos con los pasos de planificación y estamos listos para pasar finalmente al paso de desarrollo (development steep). En este último paso es donde implementamos el planque creaos usando código JS.
+
+// Para implementar el paso 1 (User Stories), podemos utilizar un formato que contiene las siguientes preguntas: who?, what? y why?
+// Ejemplo: Como usuario, quiero registrar mis entrenamientos de carrera con ubicación, distancia, tiempo, ritmo y pasos por minuto, para poder mantener un registro de todas mis carreras.
+
+// USER STORIES:
+// Para implementar las características (Features), que permitan implementar las user stories del ejemplo:
+// 1): podríamos necesitar un mapa, para colocar la ubicación de cada entrenamiento.
+// 2): dado que estamos trabajando con mapas, tal vez sería adecuado usar la geolocalización, para mostrar el mapa en la ubicación actual del usuario. Porque esto es más facil, que hacer que el usuario scrolee hasta encontrar su posición actual.
+// 3): podríamos necesitar un formulario para ingreasr el resto de los datos, la distancia, el tiempo, el ritmo, los pasos por minuto (que también se llama cadencia)
+// 4) ingresamos en el mismo formulario datos de distancia, tiempo, velocidad, y elevación.
+
+// FEATURES:
+// Las features también deben contener cómo las diferente partes de la aplicación interactúan entre si, qué evento tiene sentido implementar y también como fluyen los datos a través de la aplicación.
+
+// FLOWCHART:
+// Para mostrar estas interacciones, es bueno implementar un diagrama de flujo (Flowchat). Generalmente es mejor comenzar los diagramas con eventos, en este caso el primer evento podría ser la 'carga de la página' y junto con esto:
+// 1) obtenemos la ubicación actual mediantegeolocalización. (Sucede de manera Asíncrona).
+// 2) cargarmos/mostramos el mapa en la ubicación actual.
+// Segundo evento 'usamos clicks en el mapa':
+// 3) y 4) mostramos/ renderizamos un formulario cada vez que el usuario haga click en una determinada posición en el mapa.
+
+
+Incluir Librerías: 
+
+Lo primero que debemos hacer es, descargar la biblioteca (vamos a usar Leaflet), y de las opciones que nos ofrece vamos a usar la versión que está alojada en un CDN. Para esto vamos a copiar el código que está en la página de Leaflet, en la sección de Descargas, vamos a ir a "Using a Hosted version of Leaflet".
+Copiamos el código y lo pegamos en nuestro HTML arriba de nuestro link al script.js porque queremos que cuando se empiece a ejecutar el script, ya se haya descargado la biblioteca. 
+
+IMPORTANTE: es obligatorio usar "defer" cuando colocamos scripts en el header.
+
